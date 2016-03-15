@@ -1,9 +1,15 @@
-.body {
-  margin-top: 50px
-}
-
 .footer {
     font-size: 12pt;
+}
+
+nav {
+    background-color: #333;
+    color: #fefefe;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #fefefe
 }
 
 .contact {
