@@ -3,7 +3,16 @@
 }
 
 .footer {
+    font-size: 12pt;
+}
+
+.contact {
     margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: 40px;
     padding-top: 20px;
     color: #efefef;
     background-color: #777;
