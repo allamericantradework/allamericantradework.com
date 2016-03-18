@@ -17,6 +17,16 @@ nav {
     margin-bottom: 20px;
 }
 
+.jumbotron {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.media {
+  margin-right: 150px;
+  margin-left: 150px:
+}
+
 .footer {
     margin-top: 40px;
     padding-top: 20px;
