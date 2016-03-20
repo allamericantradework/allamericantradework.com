@@ -2,7 +2,8 @@
   "name": "aatw",
   "version": "1.0.0",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "watch": "node build.js --watch"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "homepage": "https://github.com/allamericantradework/allamericantradework.com#readme",
   "dependencies": {
     "fs-extra": "^0.26.7",
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "minimist": "^1.2.0"
   }
 }

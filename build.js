@@ -1,6 +1,7 @@
 'use strict'
 var fs = require('fs-extra')
 var Handlebars = require('handlebars')
+var minimist = require('minimist')
 
 var OUT_DIR = 'dist'
 var PARTIALS_DIR = 'partials'
@@ -56,6 +57,9 @@ function main () {
   partialFiles.forEach(registerPartial)
 
   compileAllPages()
+
+  var cliArgs = minimist(process.argv)
+  if (!cliArgs.watch) return
 
   console.log('Watching...')
   var pageWatcher = fs.watch(PAGES_DIR)
