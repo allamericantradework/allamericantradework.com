@@ -12,34 +12,8 @@
 
   <body class="body">
 
-    <nav>
-      <ul class="container nav nav-pills">
-        <li role="presentation"> <a class="nav-link" href="index.html"> Home </a></li>
-        <li role="presentation"> <a class="nav-link" href="testimonials.html"> Testimonials </a></li>
-        <li role="presentation"> <a class="nav-link" href="about-us.html"> About Us </a></li>
-        <li role="presentation"> <a class="nav-link" href="locations.html"> Locations </a></li>
-        <li role="presentation"> <a class="nav-link" href="gallery.html"> Gallery </a></li>
-        <li role="presentation"> <a class="nav-link" href="services.html"> Services </a></li>
-        <li role="presentation"> <a class="nav-link" href="contact.html"> Contact </a></li>
-      </ul>
-    </nav>
-
-    <div class="container contact">
-      <p class="col-md-4">
-        <strong> Phone </strong>
-        <br>
-        801-995-2513
-        <br>
-        <strong>  Hours </strong>
-        <br>
-        Mon-Fri 9:00am - 5:00pm
-        <br>
-        Weekends: By appointment
-      </p>
-      <p class="col-md-4 text-center">
-        <img src="/img/aatw_logo.png" alt="" />
-      </p>
-    </div>
+    {{> navbar }}
+    {{> logo-header }}
 
     <div class="jumbotron" style="background-image: url();">
       <!-- above is the placeholder for the jumbotron background image -->
@@ -80,30 +54,12 @@
           <h3>RESIDENTIAL</h3>
           At All American Trade Work, we've built our livelihoods on repainting people's homes. From the simple to the lavish, we've experienced it all and we can help you every step of the way. No job is too small or too big for our knowledgeable crews.
           <br><br>We're a locally owned and operated construction services company, and our painters are employees rather than subcontractors. That means you’ll get assistance from professionals who care about leaving you with a clean, tidy space once your job is completed.
-         </div>
-
-
-       </div>
-     </div>
-
-
-        <div class="footer">
-          <div class="container">
-            <p>
-              <strong> Phone </strong>
-              <br>
-              801-995-2513
-              <br>
-              <strong>  Hours </strong>
-              <br>
-              Mon-Fri 9:00am - 5:00pm
-              <br>
-              Weekends: By appointment
-            </p>
-            <hr>
-            <p>&copy; All American Trade Work. All rights reserved.</p>
-          </div>
         </div>
-      </body>
 
-    </html>
+
+      </div>
+    </div>
+
+    {{> footer }}
+  </body>
+</html>
