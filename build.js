@@ -1,4 +1,5 @@
 'use strict'
+var path = require('path')
 var fs = require('fs-extra')
 var Handlebars = require('handlebars')
 var minimist = require('minimist')
@@ -6,13 +7,15 @@ var minimist = require('minimist')
 var OUT_DIR = 'dist'
 var PARTIALS_DIR = 'partials'
 var PAGES_DIR = 'pages'
+var CSS_DIR = 'css'
+var IMG_DIR = 'img'
 
 function nameToObj (dirName) {
   return (name) => {
     return {
       name: name.split('.').shift(),
-      inPath: dirName + '/' + name,
-      outPath: OUT_DIR + '/' + name
+      inPath: path.join(dirName, name),
+      outPath: path.join(OUT_DIR, name)
     }
   }
 }
@@ -46,12 +49,17 @@ function incrementalPartialBuild (filename) {
   compileAllPages()
 }
 
+function copyCSSFile (filename) {
+  console.log('Updating CSS', filename)
+  fs.copy(path.join(CSS_DIR, filename), path.join(OUT_DIR, CSS_DIR, filename))
+}
+
 // Where the magic happens
 function main () {
   fs.removeSync(OUT_DIR)
   fs.mkdirSync(OUT_DIR)
-  fs.copy('css', OUT_DIR + '/css')
-  fs.copy('img', OUT_DIR + '/img')
+  fs.copy(CSS_DIR, path.join(OUT_DIR, CSS_DIR))
+  fs.copy(IMG_DIR, path.join(OUT_DIR, IMG_DIR))
 
   var partialFiles = fs.readdirSync(PARTIALS_DIR).map(nameToObj(PARTIALS_DIR))
   partialFiles.forEach(registerPartial)
@@ -73,6 +81,13 @@ function main () {
   partialWatcher.on('change', (event, filename) => {
     if (event === 'change') {
       incrementalPartialBuild(filename)
+    }
+  })
+
+  var cssWatcher = fs.watch(CSS_DIR)
+  cssWatcher.on('change', (event, filename) => {
+    if (event === 'change') {
+      copyCSSFile(filename)
     }
   })
 }
