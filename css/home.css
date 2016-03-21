@@ -18,13 +18,13 @@ nav {
 }
 
 .jumbotron {
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .footer {
     margin-top: 40px;
-    padding-top: 20px;
+    padding: 20px;
     color: #efefef;
     background-color: #777;
 }
