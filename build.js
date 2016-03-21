@@ -3,6 +3,7 @@ var path = require('path')
 var fs = require('fs-extra')
 var Handlebars = require('handlebars')
 var minimist = require('minimist')
+var debounce = require('lodash.debounce')
 
 var OUT_DIR = 'dist'
 var PARTIALS_DIR = 'partials'
@@ -67,27 +68,33 @@ function main () {
   compileAllPages()
 
   var cliArgs = minimist(process.argv)
-  if (!cliArgs.watch) return
+  if (!cliArgs.watch) return // only continue to watchers if '--watch' flag used
 
   console.log('Watching...')
+
+  var WAIT_TIME = 400 // milliseconds to wait
+  var debouncedPageBuild = debounce(incrementalPageBuild, WAIT_TIME)
+  var debouncedPartialBuild = debounce(incrementalPartialBuild, WAIT_TIME)
+  var debouncedCSSCopy = debounce(copyCSSFile, WAIT_TIME)
+
   var pageWatcher = fs.watch(PAGES_DIR)
   pageWatcher.on('change', (event, filename) => {
     if (event === 'change') {
-      incrementalPageBuild(filename)
+      debouncedPageBuild(filename)
     }
   })
 
   var partialWatcher = fs.watch(PARTIALS_DIR)
   partialWatcher.on('change', (event, filename) => {
     if (event === 'change') {
-      incrementalPartialBuild(filename)
+      debouncedPartialBuild(filename)
     }
   })
 
   var cssWatcher = fs.watch(CSS_DIR)
   cssWatcher.on('change', (event, filename) => {
     if (event === 'change') {
-      copyCSSFile(filename)
+      debouncedCSSCopy(filename)
     }
   })
 }
