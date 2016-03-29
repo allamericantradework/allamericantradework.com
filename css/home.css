@@ -28,3 +28,14 @@ nav {
     color: #efefef;
     background-color: #777;
 }
+
+.home-jumbo {
+    background-image: url("/img/aatwhome.jpg");
+    height: 600px;
+    color: #fefefe;
+    background-position: left center;
+}
+.jumbo-contact-form {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
