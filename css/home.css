@@ -1,25 +1,51 @@
 body {
     font-size: 12pt;
+    color: #293a46;
 }
 
-nav {
-    background-color: #333333;
-    color: #fefefe;
-    padding: 10px;
+/* Disable Bootstrap rounded corners on buttons and form elements */
+.form-control, .btn {
+    border-radius: 0;
 }
 
-.nav-link {
-    color: #fefefe
+/* Custom Theme for NavBar */
+nav.navbar {
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 0;
+    background-color: #3097d1;
+    border: 1px solid transparent;
+    border-color: #1c73a5;
+    border-width: 0 0 1px;
+    margin: 0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #293a46;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #293a46;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #3F7BA5;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #293a46;
+    background-color: transparent;
 }
 
 .contact {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.jumbotron {
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .footer {
@@ -29,13 +55,34 @@ nav {
     background-color: #777;
 }
 
-.home-jumbo {
-    background-image: url("/img/aatwhome.jpg");
-    height: 600px;
-    color: #fefefe;
-    background-position: left center;
+.home-banner-carousel {
+    padding-left: 0;
 }
-.jumbo-contact-form {
+
+.home-banner-hours {
+    margin-top: 20px;
+}
+
+.home-banner-hero-form {
+    text-shadow: none;
+    background-color: #eee;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.skills-list {
+    max-width: 50%;
+}
+
+.carousel {
+    height: 30%;
+}
+.carousel-caption {
+    top: 0;
+    left: 15%;
+    right: 15%;
+}
+
+.carousel-caption-content {
+    background-color: rgba(0, 0, 0, .3);
+    padding: 30px;
 }

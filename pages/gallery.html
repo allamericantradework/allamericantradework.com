@@ -2,25 +2,22 @@
 <html>
 
   <head>
-
-    <meta charset="utf-8">
-    <title>All American Trade Work</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/home.css">
-
+    {{> header title="All American TradeWork | Gallery" }}
   </head>
 
   <body class="body">
 
-    {{> navbar }}
-    {{> logo-header}}
+    {{> navbar active='gallery' }}
 
-    <div class="jumbotron" style="background-image: url();">
-      <!-- above is the placeholder for the jumbotron background image -->
+    <div class="jumbotron">
       <h2 class="text-center"> GALLERY </h2>
     </div>
 
-    STUFF ABOUT THINGS
+    {{> logo-banner }}
+
+    <div class="container">
+      <div class="alert alert-info" role="alert">Gallery Coming Soon!!!</div>
+    </div>
 
     {{> footer }}
   </body>

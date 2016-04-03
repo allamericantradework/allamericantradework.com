@@ -2,71 +2,68 @@
 <html>
 
   <head>
-
-    <meta charset="utf-8">
-    <title>All American Trade Work</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/home.css">
-
+    {{> header title="All American Trade Work | Home" }}
   </head>
 
   <body class="body">
 
-    {{> navbar }}
-    {{> logo-header }}
+    {{> navbar active='home' }}
+    {{> carousel }}
+    {{> logo-banner }}
 
-    <div class="jumbotron home-jumbo">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h1>All American Trade Work</h1>
-            <h2>Professional Painting</h2>
-          </div>
-          <div class="col-md-4">
-            <form class="jumbo-contact-form">
-              <div class="form-group">
-                <label>Name:</label>
-                <input type="text" class="form-control" placeholder="name here..." />
-              </div>
-              <div class="form-group">
-                <label>Email:</label>
-                <input type="email" class="form-control" placeholder="email here..."/>
-              </div>
-              <div class="form-group">
-                <label>How can we help you?</label>
-                <textarea class="form-control" rows="3" placeholder="tell us..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- <div class="container-fluid"> -->
+    <!--   <div class="row home-banner"> -->
+    <!--     <div class="col-md-6 home-banner-carousel"> -->
+    <!--     </div> -->
+    <!--     <div class="col-md-4 home-banner-hero"> -->
+    <!--       <div class="home-banner-hero-form"> -->
+    <!--         {{> contact-form }} -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--     <div class="col-md-2"> -->
+    <!--       <div class="panel panel-default home-banner-hours"> -->
+    <!--         <div class="panel-body"> -->
+    <!--           <dl> -->
+    <!--             <dt>Phone</dt> -->
+    <!--             <dd>801-995-2513</dd> -->
+    <!--             <dt>Weekday Hours</dt> -->
+    <!--             <dd>9:00 AM - 5:00 PM</dd> -->
+    <!--             <dt>Weekend Hours</dt> -->
+    <!--             <dd>By appointment</dd> -->
+    <!--           </dl> -->
+    <!--         </div> -->
+    <!--       </div> -->
+    <!--     </div> -->
+    <!--   </div> -->
+    <!-- </div> -->
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2>OUR PROMISE</h2>
-          <h4>Our work is amazing!  Not only do we always deliver quality work, but we make sure you're completely happy by offering our satisfaction guarantee. We won't stop working until you like what we've done.</h4>
-        </div>
-      </div>
-      <hr>
+      <hr />
       <div class="row">
         <div class="col-md-8">
-          <h2> SUMMARY </h2>
-          You can easily renew and revitalize your home or business when you hire All American Trade Work. We deliver tidy, professional service no matter what size project you need help completing. We'll use quality paints and first-rate materials whether we're remodeling your living room or painting the exterior of your house.
-          <br><br>
-          Your home will be in good hands when we're handling your renovation project because we'll make sure to deliver quality craftsmanship with every step of the process. Whether your house is traditional or contemporary, we'll treat it with respect at all times. Our trained technicians can assist you with:
-          <br><br><ul>
-            <li>Remodeling</li>
-            <li>New construction</li>
-            <li>Touch-ups</li>
-            <li>Color updates</li>
-          </ul><br>
-          Let our team restore the appeal of your property with a new layer of color. We offer both interior and exterior services. We can also provide you with faux finishes and staining services, and we offer flexible on-site work hours for your convenience. Call All American Trade Work today to speak to one of our qualified craftsmen about your upcoming project!
+          <h4>Summary</h4>
+          <p>
+            You can easily renew and revitalize your home or business when you hire All American Trade Work. We deliver tidy, professional service no matter what size project you need help completing. We'll use quality paints and first-rate materials whether we're remodeling your living room or painting the exterior of your house.
+          </p>
+          <p>
+            Your home will be in good hands when we're handling your renovation project because we'll make sure to deliver quality craftsmanship with every step of the process. Whether your house is traditional or contemporary, we'll treat it with respect at all times. Our trained technicians can assist you with:
+          </p>
+          <div class="skills-list">
+            <ul class="list-group">
+              <li class="list-group-item">Remodeling</li>
+              <li class="list-group-item">New construction</li>
+              <li class="list-group-item">Touch-ups</li>
+              <li class="list-group-item">Color updates</li>
+            </ul>
+          </div>
+          <p>
+            Let our team restore the appeal of your property with a new layer of color. We offer both interior and exterior services. We can also provide you with faux finishes and staining services, and we offer flexible on-site work hours for your convenience. Call All American Trade Work today to speak to one of our qualified craftsmen about your upcoming project!
+          </p>
         </div>
         <div class="col-md-4">
-          <h2> THIS IS WHERE A NEAT PICTURE SHOULD GO </h2>
+          <a href="#">
+            <img src="/img/aatw-stairway.jpg" alt="..." class="img-thumbnail" style="height: 500px" />
+          </a>
         </div>
       </div>
     </div>

@@ -10,6 +10,14 @@ var PARTIALS_DIR = 'partials'
 var PAGES_DIR = 'pages'
 var CSS_DIR = 'css'
 var IMG_DIR = 'img'
+var FONTS_DIR = 'fonts'
+
+Handlebars.registerHelper('ifEq', function(v1, v2, options) {
+  if(v1 === v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
 
 function nameToObj (dirName) {
   return (name) => {
@@ -61,6 +69,7 @@ function main () {
   fs.mkdirSync(OUT_DIR)
   fs.copy(CSS_DIR, path.join(OUT_DIR, CSS_DIR))
   fs.copy(IMG_DIR, path.join(OUT_DIR, IMG_DIR))
+  fs.copy(FONTS_DIR, path.join(OUT_DIR, FONTS_DIR))
 
   var partialFiles = fs.readdirSync(PARTIALS_DIR).map(nameToObj(PARTIALS_DIR))
   partialFiles.forEach(registerPartial)
