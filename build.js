@@ -11,6 +11,7 @@ var PAGES_DIR = 'pages'
 var CSS_DIR = 'css'
 var IMG_DIR = 'img'
 var FONTS_DIR = 'fonts'
+var JS_DIR = 'js'
 
 Handlebars.registerHelper('ifEq', function(v1, v2, options) {
   if(v1 === v2) {
@@ -70,6 +71,7 @@ function main () {
   fs.copy(CSS_DIR, path.join(OUT_DIR, CSS_DIR))
   fs.copy(IMG_DIR, path.join(OUT_DIR, IMG_DIR))
   fs.copy(FONTS_DIR, path.join(OUT_DIR, FONTS_DIR))
+  fs.copy(JS_DIR, path.join(OUT_DIR, JS_DIR)) // TODO: combine all scripts
 
   var partialFiles = fs.readdirSync(PARTIALS_DIR).map(nameToObj(PARTIALS_DIR))
   partialFiles.forEach(registerPartial)
