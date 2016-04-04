@@ -22,10 +22,10 @@ $('#contact-form').submit(function (event) {
       nameField.val('')
       emailField.val('')
       descField.val('')
-      $('#success-alert').show()
+      $('#success-alert').slideDown()
     },
     error: function (response) {
-      $('#error-alert').show()
+      $('#error-alert').slideDown()
       populateMailtoLink(data.name, data.description)
     }
   })
