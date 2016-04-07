@@ -122,3 +122,8 @@ nav.navbar {
 .footer a {
     color: #3898CE;
 }
+
+iframe {
+    background-color: #3097d1;
+    border: 1px solid #cdcdcd;
+}
