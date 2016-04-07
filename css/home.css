@@ -5,7 +5,7 @@ body {
 
 /* Disable Bootstrap rounded corners on buttons and form elements */
 .form-control, .btn {
-    border-radius: 0;
+    border-radius: 3px;
 }
 
 /* Custom Theme for NavBar */
@@ -91,6 +91,7 @@ nav.navbar {
 
 .carousel-caption-content {
     background-color: rgba(0, 0, 0, .3);
+    border-radius: 3px;
     padding: 30px;
 }
 
