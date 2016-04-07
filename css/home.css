@@ -81,7 +81,7 @@ nav.navbar {
 }
 
 .carousel {
-    height: 30%;
+    min-height: 30%;
 }
 .carousel-caption {
     top: 0;
@@ -92,6 +92,15 @@ nav.navbar {
 .carousel-caption-content {
     background-color: rgba(0, 0, 0, .3);
     padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption-content {
+        padding: 5px;
+    }
+    .carousel-caption {
+        padding: 0 5px 5px 5px;
+    }
 }
 
 .jumbotron {
