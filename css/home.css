@@ -55,13 +55,6 @@ nav.navbar {
     margin-bottom: 20px;
 }
 
-.footer {
-    margin-top: 40px;
-    padding: 20px;
-    color: #efefef;
-    background-color: #777;
-}
-
 .home-banner-carousel {
     padding-left: 0;
 }
@@ -117,4 +110,15 @@ nav.navbar {
     min-width: 200px;
     padding: 30px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: #efefef;
+    background-color: #777777;
+}
+
+.footer a {
+    color: #3898CE;
 }
