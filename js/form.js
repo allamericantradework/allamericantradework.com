@@ -1,4 +1,4 @@
-var URL = 'https://8kcwjsqpqh.execute-api.us-east-1.amazonaws.com/test/contact'
+var URL = 'https://ktsg8g74ue.execute-api.us-east-1.amazonaws.com/prod'
 
 $('#contact-form').submit(function (event) {
   event.preventDefault()
@@ -14,7 +14,7 @@ $('#contact-form').submit(function (event) {
 
   $.ajax({
     type: 'POST',
-    url: URL,
+    url: URL + '/message',
     dataType: 'json',
     contentType: 'application/json',
     data: JSON.stringify(data),
