@@ -3,6 +3,9 @@ console.log('Loading function')
 
 var ses = new AWS.SES()
 
+var SENDER = 'tgroshon@gmail.com'
+var RECEIVER = 'tgroshon@gmail.com'
+
 exports.handler = function(event, context) {
   console.log('Received event:', event)
   sendEmail(event, function (err, data) {
@@ -14,7 +17,7 @@ function sendEmail (event, done) {
   var params = {
     Destination: {
       ToAddresses: [
-        'thomas.groshong@gmail.com'
+        RECEIVER
       ]
     },
     Message: {
@@ -29,7 +32,7 @@ function sendEmail (event, done) {
         Charset: 'UTF-8'
       }
     },
-    Source: 'thomas.groshong@gmail.com'
+    Source: SENDER
   }
   ses.sendEmail(params, done)
 }
