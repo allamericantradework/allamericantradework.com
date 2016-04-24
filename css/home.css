@@ -3,6 +3,10 @@ body {
     color: #293a46;
 }
 
+dd {
+    margin-bottom: 10px;
+}
+
 /* Disable Bootstrap rounded corners on buttons and form elements */
 .form-control, .btn {
     border-radius: 3px;
@@ -57,6 +61,13 @@ nav.navbar {
 
 .skills-list {
     max-width: 50%;
+}
+
+.logo-subtitle {
+    color: red;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
 }
 
 .carousel {
