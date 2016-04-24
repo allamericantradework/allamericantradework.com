@@ -92,6 +92,21 @@ nav.navbar {
     .carousel-caption {
         padding: 0 5px 0 5px;
     }
+    .logo-title {
+        font-size: 29px;
+    }
+    .logo-subtitle {
+        margin-bottom: 20px;
+    }
+    .logo-contact {
+        padding-top: 20px;
+        border-top: 1px solid #cdcdcd;
+        text-align: center;
+    }
+}
+
+.logo-contact {
+    margin-top: 10px;
 }
 
 .jumbotron {
