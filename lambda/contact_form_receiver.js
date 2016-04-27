@@ -3,8 +3,8 @@ console.log('Loading function')
 
 var ses = new AWS.SES()
 
-var SENDER = 'tgroshon@gmail.com'
-var RECEIVER = 'tgroshon@gmail.com'
+var SENDER = 'noreply@allamericantradework.com'
+var RECEIVER = 'zach@allamericantradework.com'
 
 exports.handler = function(event, context) {
   console.log('Received event:', event)
@@ -23,7 +23,7 @@ function sendEmail (event, done) {
     Message: {
       Body: {
         Text: {
-          Data: 'Name: ' + event.name + '\nEmail: ' + event.email + '\nDesc: ' + event.description,
+          Data: '*Do Not Reply To This Message!\nName: ' + event.name + '\nEmail: ' + event.email + '\nDesc: ' + event.description,
           Charset: 'UTF-8'
         }
       },
