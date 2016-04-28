@@ -143,3 +143,18 @@ iframe {
     background-color: #3097d1;
     border: 1px solid #cdcdcd;
 }
+
+/* Social Icons */
+.social-icons {
+    font-size: 22px;
+}
+
+.social-icons a, .social-icons a:hover, .social-icons a:active {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.facebook {color: #6597CC;}
+.gplus {color: #a32929;}
+.instagram {color: #d5b120;}
+.facebook:hover, .gplus:hover, .instagram:hover {color: #cdcdcd;}
