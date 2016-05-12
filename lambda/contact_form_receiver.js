@@ -4,11 +4,12 @@ console.log('Loading function')
 var ses = new AWS.SES()
 
 var SENDER = 'noreply@allamericantradework.com'
-var RECEIVER = 'zach@allamericantradework.com'
+var RECEIVER = 'tannerite93@gmail.com'
 
 exports.handler = function(event, context) {
   console.log('Received event:', event)
   sendEmail(event, function (err, data) {
+    console.log('SES data:', data)
     context.done(err, null)
   })
 }
